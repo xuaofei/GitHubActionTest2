@@ -1,0 +1,13 @@
+name: 'test2'
+inputs:
+  task_id:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: request task
+      run: |
+        echo "TASK_ID=${{ github.event.inputs.task_id }}"
+      shell: bash
+    
